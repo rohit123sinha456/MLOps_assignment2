@@ -82,9 +82,9 @@ def step_function(y_predicted):
 
 # Main Function to Run the Program
 if __name__=="__main__":
-    X,y = make_classification(n_samples=1000000)
-    X_train,X_test = X[:800000],X[800001:]
-    y_train,y_test = y[:800000],y[800001:]
+    X,y = make_classification(n_samples=100000)
+    X_train,X_test = X[:80000],X[80001:]
+    y_train,y_test = y[:80000],y[80001:]
     sc = pyspark.SparkContext().getOrCreate()
     data = np.hstack([X_train, y_train.reshape(-1,1)]).tolist()
     updated_weights = train(sc,data)
