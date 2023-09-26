@@ -5,4 +5,4 @@ mv spark-3.5.0-bin-hadoop3 spark
 export SPARKHOME=/home/labuser/spark
 export PATH=$PATH:$SPARKHOME/bin
 source ~/.bashrc
-pip install pyspark numpy
+pip install pyspark numpy scikit-learn
