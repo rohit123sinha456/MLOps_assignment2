@@ -37,7 +37,7 @@ def train(sc,data):
 
 def test(x_test,weights):
     y_predicted = []
-    for i,val in enumerate(x_test):
+    for i in x_test:
         y_predicted.append(np.dot(i,weights))
     return y_predicted
 
